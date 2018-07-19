@@ -16,13 +16,6 @@ class Timer extends Component {
     this.stopClock();
   }
 
-
-
-
-
-
-
-
   render() {
 
     const { time, color, className } = this.state
