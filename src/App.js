@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Timer from './Timer'
+import { timingSafeEqual } from 'crypto';
 
 class App extends Component {
 
@@ -12,10 +13,9 @@ class App extends Component {
 
   //Your code here:
 
-
-
-
-
+  componentDidMount() {
+    this.handleAddTimer();
+  }
 
 
 
@@ -23,7 +23,7 @@ class App extends Component {
   // No need to modify anything in render or the class methods below
   // Unless, of course, you're curious about how it all works
   render() {
-
+    console.log(this.state.timerIDs)
     return (
       <div className="App">
         <h1>MultiTimer</h1>
